@@ -1,4 +1,4 @@
-.sr-only
+.srOnly
 
 /*:not(:focus):not(:active)*/
     {
@@ -16,19 +16,26 @@
     /* added line */
 }
 
-.dentistsList {
+h1 {
+    font-family: 'Yellowtail';
+}
+.grid {
     display: grid;
     grid-auto-flow: row dense;
+}
+.hoursGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.dentistsGrid {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 
-.servicesList {
-    display: grid;
-    grid-auto-flow: row dense;
+.servicesGrid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(9, 1fr);
-} d
+} 
 
 .gridCol1 {
     grid-column-start: 1;
@@ -51,7 +58,18 @@
     grid-column-start: 6;
 }
 
+.gridRow1 {
+    grid-row-start: 1;
+}
 .gridRow2 {
     grid-row-start: 2;
 }
-
+.gridRow3 {
+    grid-row-start: 3;
+}
+.gridRow4 {
+    grid-row-start: 4;
+}
+.gridRow5 {
+    grid-row-start: 5;
+}
