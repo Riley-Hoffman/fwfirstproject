@@ -36,8 +36,33 @@
     flex-basis: 25%;
 }
 
+body {
+    background-color: white;
+    width: 100%;
+}
+body > * {
+    margin: 0 auto;
+}
+header {
+    overflow: hidden;
+}
+nav {
+    background-color: var(--dark-gray-background);
+}
+
 h1 {
     font-family: 'Yellowtail';
+}
+
+.jSpBetween {
+    justify-content: space-between;
+}
+.jSpAround {
+    justify-content: space-around;
+}
+
+.jConCenter {
+    justify-content: center;
 }
 .grid {
     display: grid;
@@ -94,7 +119,7 @@ h1 {
     grid-row-start: 5;
 }
 
-.socialsList {
+.socialsList, nav ul {
     list-style: none;
 }
 header .socialsList i {
