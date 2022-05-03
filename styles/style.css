@@ -1,0 +1,57 @@
+.sr-only
+
+/*:not(:focus):not(:active)*/
+    {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    /* future proofing */
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap;
+    /* added line */
+}
+
+.dentistsList {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.servicesList {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+} d
+
+.gridCol1 {
+    grid-column-start: 1;
+}
+
+.gridCol2 {
+    grid-column-start: 2;
+}
+
+.gridCol3 {
+    grid-column-start: 3;
+}
+.gridCol4 {
+    grid-column-start: 4;
+}
+.gridCol5 {
+    grid-column-start: 5;
+}
+.gridCol6 {
+    grid-column-start: 6;
+}
+
+.gridRow2 {
+    grid-row-start: 2;
+}
+
