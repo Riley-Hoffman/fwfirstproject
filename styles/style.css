@@ -16,6 +16,26 @@
     /* added line */
 }
 
+:root {
+    --blue: #2171df;
+    --dark-gray-text: #8e8e8e;
+    --light-gray-text: #aaa9a9;
+    --light-gray-background: rgb(62, 62, 62);
+    --dark-gray-background: rgb(41, 41, 42);
+    --green: #81d742;
+    --off-white: #f3f3f3;
+}
+
+.👪 .🙎‍♂️75 {
+    flex-basis: 75%;
+}
+.👪 .🙎‍♂️50 {
+    flex-basis: 50%;
+}
+.👪 .🙎‍♂️25 {
+    flex-basis: 25%;
+}
+
 h1 {
     font-family: 'Yellowtail';
 }
@@ -72,4 +92,22 @@ h1 {
 }
 .gridRow5 {
     grid-row-start: 5;
+}
+
+.socialsList {
+    list-style: none;
+}
+header .socialsList i {
+    color: white;
+}
+
+footer .socialsList i {
+    color: var(--dark-gray-text);
+}
+
+.blueButton {
+    background-color: var(--blue);
+    box-shadow: 0 12px 12px -12px black;
+    padding: .667em 1.333em;
+    text-transform: uppercase;
 }
