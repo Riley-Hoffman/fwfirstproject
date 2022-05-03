@@ -15,15 +15,22 @@
     white-space: nowrap;
     /* added line */
 }
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
 
 :root {
     --blue: #2171df;
-    --dark-gray-text: #8e8e8e;
-    --light-gray-text: #aaa9a9;
-    --light-gray-background: rgb(62, 62, 62);
-    --dark-gray-background: rgb(41, 41, 42);
-    --green: #81d742;
+    --button-shadow: 0 12px 12px -12px black;
     --off-white: #f3f3f3;
+    --light-gray-text: #aaa9a9;
+    --mid-light-gray: #8e8e8e;
+    --mid-light-gray-back: rgb(62, 62, 62);
+    --mid-dark-gray-back: rgb(53, 53, 53);
+    --mid-gray: rgb(41, 41, 42);
+    --dark-gray: rgb(26, 26, 26);
+    --green: #81d742;
 }
 
 .👪 .🙎‍♂️75 {
@@ -38,22 +45,37 @@
 
 body {
     background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
 }
 body > * {
     margin: 0 auto;
 }
 header {
+    flex-direction: column;
     overflow: hidden;
 }
 nav {
-    background-color: var(--dark-gray-background);
+    background-color: var(--dark-gray);
+    height: 55px;
+    margin: 0;
 }
 
 h1 {
+    color: white;
     font-family: 'Yellowtail';
 }
 
+h1, h2 {
+    color: white
+}
+
+.black {
+    color: black;
+}
+.aCenter {
+    align-items: center;
+}
 .jSpBetween {
     justify-content: space-between;
 }
@@ -63,6 +85,61 @@ h1 {
 
 .jConCenter {
     justify-content: center;
+}
+.topBar {
+    background-color: var(--blue);
+}
+.topBar p {
+    color: white;
+}
+.bar2 {
+    background-color: var(--dark-gray);
+}
+.bar3, .comeVisit,  .services {
+    background-color: var(--mid-gray);
+}
+
+.bar4, .businessHours, .feelingFrozen, .implants, .digitalXrays {
+    background-color: var(--mid-light-gray-back);
+}
+.ourDentists, footer {
+    background-color: var(--mid-dark-gray-back);
+}
+.cerec {
+    background-color: var(--off-white);
+}
+
+.socialsList,
+nav ul {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+}
+
+header .socialsList i {
+    color: white;
+}
+
+.blueButton {
+    background-color: var(--blue);
+    box-shadow: var(--button-shadow);
+    padding: .667em 1.333em;
+    text-transform: uppercase;
+}
+
+.readMoreWhite {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--button-shadow);
+    color: var(--dark-gray);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.125em;
+    padding: .667em 1.333em;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: break-word;
 }
 .grid {
     display: grid;
@@ -119,20 +196,10 @@ h1 {
     grid-row-start: 5;
 }
 
-.socialsList, nav ul {
-    list-style: none;
+footer .bottomBar {
+    background-color: black;
 }
-header .socialsList i {
-    color: white;
-}
-
 footer .socialsList i {
-    color: var(--dark-gray-text);
+    color: var(--mid-light-gray);
 }
 
-.blueButton {
-    background-color: var(--blue);
-    box-shadow: 0 12px 12px -12px black;
-    padding: .667em 1.333em;
-    text-transform: uppercase;
-}
