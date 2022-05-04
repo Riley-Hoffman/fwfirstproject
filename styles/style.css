@@ -64,7 +64,7 @@ body,
   width: 100%;
 }
 
-body > * {
+main > * {
   margin: 0 auto;
 }
 
@@ -75,6 +75,7 @@ header {
 nav {
   background-color: var(--dark-gray);
   height: 65px;
+  overflow: hidden;
 }
 
 nav,
@@ -90,11 +91,6 @@ nav li:nth-child(3)::after,
   font-size: 14px;
 }
 
-nav li,
-footer > div:first-child img {
-  margin: 0 20px;
-}
-
 nav li:nth-child(2)::after,
 nav li:nth-child(3)::after {
   color: var(--green);
@@ -104,6 +100,15 @@ nav li:nth-child(3)::after {
   top: -3px;
   height: 5px;
   width: 5px;
+}
+
+nav li {
+  margin: 0 5px;
+  padding: 3px;
+}
+
+nav a {
+  padding: 500px 20px;
 }
 
 h1,
@@ -239,6 +244,14 @@ footer .bottomBar a:not(first-of-type) {
 
 .topBar {
   background-color: var(--blue);
+}
+
+.topBar p,
+.readMoreWhite,
+.ourDentists>div,
+.services h2,
+.digitalXrays {
+    text-align: center;
 }
 
 .topBar,
@@ -400,7 +413,9 @@ footer address span {
 }
 
 .navApptButton.blueButton {
+  border: 1px solid var(--blue);
   border-radius: 3px;
+  transition: all 0.7s;
 }
 
 .readMore,
@@ -434,14 +449,6 @@ footer address span {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(1, 1fr);
   margin-bottom: 10px;
-}
-
-.topBar p,
-.readMoreWhite,
-.ourDentists > div,
-.services h2,
-.digitalXrays {
-  text-align: center;
 }
 
 .servicesGrid {
@@ -519,6 +526,10 @@ footer > div:first-child ul li {
   margin: 16px 0;
 }
 
+footer > div:first-child img {
+  margin: 0 20px;
+}
+
 footer h4 {
   font-weight: normal;
   margin-top: 0;
@@ -543,4 +554,18 @@ footer .bottomBar p {
 
 footer .socialsList i {
   color: var(--mid-light-gray);
+}
+
+/* Hover Styles */
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navApptButton.blueButton:hover {
+    background-position: 100% 0% !important;
+}
+
+.socialsList a:hover i, .readMore:hover {
+    text-decoration: underline;
 }
