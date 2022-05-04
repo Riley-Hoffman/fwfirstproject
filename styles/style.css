@@ -556,8 +556,6 @@ footer .socialsList i {
   color: var(--mid-light-gray);
 }
 
-/* Hover Styles */
-
 nav a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
