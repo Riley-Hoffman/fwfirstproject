@@ -90,8 +90,20 @@ nav li:nth-child(3)::after,
   font-size: 14px;
 }
 
-nav li {
+nav li,
+footer > div:first-child img {
   margin: 0 20px;
+}
+
+nav li:nth-child(2)::after,
+nav li:nth-child(3)::after {
+  color: var(--green);
+  content: "\f078";
+  font: var(--fa-font-solid);
+  margin-left: 13px;
+  top: -3px;
+  height: 5px;
+  width: 5px;
 }
 
 h1,
@@ -109,17 +121,6 @@ header .socialsList i,
 .comeVisit p,
 .privacy {
   color: white;
-}
-
-nav li:nth-child(2)::after,
-nav li:nth-child(3)::after {
-  color: var(--green);
-  content: "\f078";
-  font: var(--fa-font-solid);
-  margin-left: 13px;
-  top: -3px;
-  height: 5px;
-  width: 5px;
 }
 
 h1 {
@@ -193,9 +194,23 @@ section {
   justify-content: space-around;
 }
 
-section,
-.jConCenter {
+.jConCenter,
+section {
   justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: row dense;
+}
+
+.bar2 ul li a,
+footer .bottomBar a:not(first-of-type) {
+  margin: auto 8px;
+}
+
+.bar3 {
+  padding: 20px 0;
 }
 
 .bar3 div {
@@ -204,6 +219,17 @@ section,
 
 .bar3 img {
   margin-right: 20px;
+}
+
+.bar3 p {
+  margin: 5px 0;
+}
+
+.bar2 ul li a,
+.bar3 a,
+.recentPosts a,
+footer .bottomBar a:not(first-of-type) {
+  padding: 0;
 }
 
 .bar3 p,
@@ -230,10 +256,6 @@ section,
   padding: 0 15%;
 }
 
-.bar2 ul li {
-  margin: 0 10px;
-}
-
 .bar3,
 .comeVisit,
 .services {
@@ -250,6 +272,7 @@ section,
 .digitalXrays {
   background-color: var(--mid-light-gray-back);
 }
+
 nav li:nth-child(2)::after,
 nav li:nth-child(3)::after,
 .bar4 {
@@ -283,10 +306,8 @@ nav ul {
 }
 
 nav a,
-.footerContact a,
-.privacy,
-.readMoreWhite {
-  text-decoration: underline;
+.readMoreWhite a {
+  text-decoration: none;
 }
 
 header,
@@ -404,11 +425,6 @@ footer address span {
   padding: 0.67rem 1.33rem;
 }
 
-.grid {
-  display: grid;
-  grid-auto-flow: row dense;
-}
-
 .hoursGrid {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -481,6 +497,11 @@ footer address span {
   grid-row-start: 5;
 }
 
+footer p,
+footer a {
+  font-size: 15px;
+}
+
 footer > div {
   min-width: 100%;
 }
@@ -488,10 +509,6 @@ footer > div {
 footer > div:first-child {
   min-height: 45vh;
   padding: 0 30px 40px;
-}
-
-footer > div:first-child img {
-  margin: 0 20px;
 }
 
 footer > div:first-child ul {
@@ -508,7 +525,12 @@ footer h4 {
 }
 
 .privacy {
-  font-size: 10px;
+  font-size: 11px;
+}
+
+.footerContact a,
+.privacy {
+  text-decoration: underline;
 }
 
 footer .bottomBar {
@@ -517,11 +539,6 @@ footer .bottomBar {
 
 footer .bottomBar p {
   font-size: 12px;
-}
-
-footer .bottomBar a:not(first-of-type) {
-  margin: auto 8px;
-  padding: 0;
 }
 
 footer .socialsList i {
