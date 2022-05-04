@@ -26,7 +26,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     --off-white: #f3f3f3;
     --light-gray-text: #aaa9a9;
     --mid-light-gray: #8e8e8e;
-    --mid-light-gray-back: rgb(62, 62, 62);
+    --mid-light-gray-back: rgb(57, 57, 57);
     --mid-dark-gray-back: rgb(53, 53, 53);
     --mid-gray: rgb(41, 41, 42);
     --dark-gray: rgb(26, 26, 26);
@@ -85,6 +85,10 @@ h1 {
     margin: 3px 0 12px;
 }
 
+h2 {
+    margin: 2px 0 5px;
+}
+
 h1, h2 {
     color: white
 }
@@ -100,10 +104,14 @@ img, section, section div {
 section {
     display: flex;
     justify-content: center;
+    padding: 60px 0;
 }
 
 .black {
     color: black;
+}
+.white {
+    color: white;
 }
 .aCenter {
     align-items: center;
@@ -117,6 +125,12 @@ section {
 
 .jConCenter {
     justify-content: center;
+}
+
+.readMore {
+    display: block;
+    margin-bottom: 30px;
+    padding: 0px 20px;
 }
 .topBar p {
     color: white;
@@ -198,10 +212,49 @@ header .socialsList i {
 .topSection {
     flex-direction: column;
 }
+.topSection em, .topSection h2 {
+    font-weight: bold;
+}
 
+.topSection em {
+    color: #3e3e3e;
+}
+
+.sep15Container p {
+    color: #aaa9a9;
+}
+.businessHours div {
+    width: 50%;
+}
+
+.hoursGrid {
+    min-width: 356px;
+}
+
+.businessHours h3, .businessHours .blueButton {
+    color: white;
+    text-transform: capitalize;
+}
+.businessHours p {
+    color: var(--mid-light-gray);
+    line-height: 1;
+    margin: 0;
+}
+.comeVisit, .comeVisit p {
+    color: white;
+}
+.comeVisit img {
+    max-width: 15%;
+}
+
+.feelingFrozen p {
+    color: var(--mid-light-gray);
+}
 .blueButton {
     background-color: var(--blue);
     box-shadow: var(--button-shadow);
+    color: white;
+    margin: 10px 20px;
     padding: .667em 1.333em;
     text-transform: uppercase;
 }
