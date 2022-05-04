@@ -57,17 +57,49 @@ header {
 }
 nav {
     background-color: var(--dark-gray);
-    height: 55px;
+    font-size: 14px;
+    height: 65px;
     margin: 0;
+}
+
+nav li {
+    color: white;
+    margin: 0 20px;
+}
+nav li:nth-child(2)::after, nav li:nth-child(3)::after {
+    color: var(--green);
+    content: '\f078';
+    font: var(--fa-font-solid);
+    font-size: 14px;
+    width: 5px;
+    height: 5px;
+    margin-left: 13px;
+    top: -3px;
+    position: relative;
 }
 
 h1 {
     color: white;
     font-family: 'Yellowtail';
+    font-size: 39px;
+    margin: 3px 0 12px;
 }
 
 h1, h2 {
     color: white
+}
+
+address {
+    font-style: normal;
+}
+
+img, section, section div {
+    height: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
 }
 
 .black {
@@ -86,14 +118,41 @@ h1, h2 {
 .jConCenter {
     justify-content: center;
 }
-.topBar {
-    background-color: var(--blue);
-}
 .topBar p {
     color: white;
+    text-align: center;
+}
+
+.bar3 div {
+    width: 65%;
+}
+
+.bar3 img {
+    margin-right: 20px;
+}
+
+.bar3 p {
+    color: white;
+    text-align: right;
+}
+
+.topBar {
+    background-color: var(--blue);
+    font-weight: bold;
 }
 .bar2 {
     background-color: var(--dark-gray);
+}
+.bar2 > div {
+    font-size: 14px;
+    padding: 0 15%;
+    width: 100%;
+}
+.bar2 address {
+    color: white;
+}
+.bar2 ul li {
+    margin: 0 10px;
 }
 .bar3, .comeVisit,  .services {
     background-color: var(--mid-gray);
@@ -101,6 +160,21 @@ h1, h2 {
 
 .bar4, .businessHours, .feelingFrozen, .implants, .digitalXrays {
     background-color: var(--mid-light-gray-back);
+}
+.bar4 {
+    position: relative;
+}
+.bar4 > div {
+    justify-content: flex-start;
+    width: 100%;
+}
+.bar4::after {
+    background-color: var(--green);
+    bottom: 5%;
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
 }
 .ourDentists, footer {
     background-color: var(--mid-dark-gray-back);
@@ -121,11 +195,19 @@ header .socialsList i {
     color: white;
 }
 
+.topSection {
+    flex-direction: column;
+}
+
 .blueButton {
     background-color: var(--blue);
     box-shadow: var(--button-shadow);
     padding: .667em 1.333em;
     text-transform: uppercase;
+}
+.navApptButton.blueButton {
+    border-radius: 3px;
+    text-transform: capitalize;
 }
 
 .readMoreWhite {
