@@ -1,340 +1,529 @@
-.srOnly
+.sr-only
 
-/*:not(:focus):not(:active)*/
-    {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    /* future proofing */
-    -webkit-clip-path: inset(50%) !important;
-    clip-path: inset(50%) !important;
-    white-space: nowrap;
-    /* added line */
+/*:not(:focus):not(:active)*/ {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* future proofing */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap;
+  /* added line */
 }
-html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-*, *:before, *:after { box-sizing: inherit; }
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 :root {
-    --blue: #2171df;
-    --button-shadow: 0 12px 12px -12px black;
-    --off-white: #f3f3f3;
-    --light-gray-text: #aaa9a9;
-    --mid-light-gray: #8e8e8e;
-    --mid-light-gray-back: rgb(57, 57, 57);
-    --mid-dark-gray-back: rgb(53, 53, 53);
-    --mid-gray: rgb(41, 41, 42);
-    --dark-gray: rgb(26, 26, 26);
-    --green: #81d742;
+  --blue: #2171df;
+  --green: #81d742;
+  --button-shadow: 0 12px 12px -12px black;
+  --off-white: #f3f3f3;
+  --light-gray-text: #aaa9a9;
+  --mid-light-gray: #8e8e8e;
+  --mid-light-gray-back: rgb(57, 57, 57);
+  --mid-dark-gray-back: rgb(53, 53, 53);
+  --mid-gray: rgb(41, 41, 42);
+  --dark-gray: rgb(26, 26, 26);
 }
 
 .👪 .🙎‍♂️75 {
-    flex-basis: 75%;
+  flex-basis: 75%;
 }
-.👪 .🙎‍♂️50 {
-    flex-basis: 50%;
+
+.👪:not(.footerBox) .🙎‍♂️50 {
+  flex-basis: 50%;
 }
-.👪 .🙎‍♂️25 {
-    flex-basis: 25%;
+
+.👪:not(.footerBox) .🙎‍♂️25 {
+  flex-basis: 25%;
 }
 
 body {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+body,
+.bar2 > div,
+.bar4 > div,
+.bar4::after {
+  width: 100%;
+}
+
 body > * {
-    margin: 0 auto;
+  margin: 0 auto;
 }
+
 header {
-    flex-direction: column;
-    overflow: hidden;
+  overflow: hidden;
 }
+
 nav {
-    background-color: var(--dark-gray);
-    font-size: 14px;
-    height: 65px;
-    margin: 0;
+  background-color: var(--dark-gray);
+  height: 65px;
+}
+
+nav,
+.heroImage,
+.businessHours p {
+  margin: 0;
+}
+
+nav,
+nav li:nth-child(2)::after,
+nav li:nth-child(3)::after,
+.bar2 > div {
+  font-size: 14px;
 }
 
 nav li {
-    color: white;
-    margin: 0 20px;
+  margin: 0 20px;
 }
-nav li:nth-child(2)::after, nav li:nth-child(3)::after {
-    color: var(--green);
-    content: '\f078';
-    font: var(--fa-font-solid);
-    font-size: 14px;
-    width: 5px;
-    height: 5px;
-    margin-left: 13px;
-    top: -3px;
-    position: relative;
+
+h1,
+h2,
+h3,
+h4,
+nav li,
+.topBar p,
+.bar3 p,
+.bar2 address,
+header .socialsList i,
+.blueButton,
+.businessHours .blueButton,
+.comeVisit,
+.comeVisit p,
+.privacy {
+  color: white;
+}
+
+nav li:nth-child(2)::after,
+nav li:nth-child(3)::after {
+  color: var(--green);
+  content: "\f078";
+  font: var(--fa-font-solid);
+  margin-left: 13px;
+  top: -3px;
+  height: 5px;
+  width: 5px;
 }
 
 h1 {
-    color: white;
-    font-family: 'Yellowtail';
-    font-size: 39px;
-    margin: 3px 0 12px;
+  font-family: "Yellowtail";
+  font-size: 39px;
+  margin: 3px 0 12px;
 }
 
 h2 {
-    margin: 2px 0 5px;
+  margin: 2px 0 5px;
 }
 
-h1, h2 {
-    color: white
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+.businessHours .blueButton,
+.navApptButton.blueButton {
+  text-transform: capitalize;
+}
+
+a,
+address {
+  padding: 0 20px;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
-img, section, section div {
-    height: 100%;
+img,
+section,
+section div {
+  height: 100%;
+}
+
+img,
+figure {
+  margin: 20px 20px;
 }
 
 section {
-    display: flex;
-    justify-content: center;
-    padding: 60px 0;
+  display: flex;
+  padding: 60px 0;
 }
 
 .black {
-    color: black;
+  color: black;
 }
+
 .white {
-    color: white;
+  color: white;
 }
+
 .aCenter {
-    align-items: center;
+  align-items: center;
 }
+
 .jSpBetween {
-    justify-content: space-between;
+  justify-content: space-between;
 }
+
 .jSpAround {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
+section,
 .jConCenter {
-    justify-content: center;
-}
-
-.readMore {
-    display: block;
-    margin-bottom: 30px;
-    padding: 0px 20px;
-}
-.topBar p {
-    color: white;
-    text-align: center;
+  justify-content: center;
 }
 
 .bar3 div {
-    width: 65%;
+  width: 65%;
 }
 
 .bar3 img {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
-.bar3 p {
-    color: white;
-    text-align: right;
+.bar3 p,
+.footerContact {
+  text-align: right;
 }
 
 .topBar {
-    background-color: var(--blue);
-    font-weight: bold;
-}
-.bar2 {
-    background-color: var(--dark-gray);
-}
-.bar2 > div {
-    font-size: 14px;
-    padding: 0 15%;
-    width: 100%;
-}
-.bar2 address {
-    color: white;
-}
-.bar2 ul li {
-    margin: 0 10px;
-}
-.bar3, .comeVisit,  .services {
-    background-color: var(--mid-gray);
+  background-color: var(--blue);
 }
 
-.bar4, .businessHours, .feelingFrozen, .implants, .digitalXrays {
-    background-color: var(--mid-light-gray-back);
+.topBar,
+.topSection em,
+.topSection h2,
+.readMoreBlue {
+  font-weight: bold;
 }
+
+.bar2 {
+  background-color: var(--dark-gray);
+}
+
+.bar2 > div {
+  padding: 0 15%;
+}
+
+.bar2 ul li {
+  margin: 0 10px;
+}
+
+.bar3,
+.comeVisit,
+.services {
+  background-color: var(--mid-gray);
+}
+
+.bar3 img {
+}
+
+.bar4,
+.businessHours,
+.feelingFrozen,
+.implants,
+.digitalXrays {
+  background-color: var(--mid-light-gray-back);
+}
+nav li:nth-child(2)::after,
+nav li:nth-child(3)::after,
 .bar4 {
-    position: relative;
+  position: relative;
 }
+
 .bar4 > div {
-    justify-content: flex-start;
-    width: 100%;
+  justify-content: flex-start;
 }
+
 .bar4::after {
-    background-color: var(--green);
-    bottom: 5%;
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
+  background-color: var(--green);
+  bottom: 5%;
+  content: "";
+  height: 2px;
+  position: absolute;
 }
-.ourDentists, footer {
-    background-color: var(--mid-dark-gray-back);
+
+.ourDentists,
+footer {
+  background-color: var(--mid-dark-gray-back);
 }
+
 .cerec {
-    background-color: var(--off-white);
+  background-color: var(--off-white);
 }
 
 .socialsList,
 nav ul {
-    list-style: none;
-}
-nav a {
-    text-decoration: none;
+  list-style: none;
 }
 
-header .socialsList i {
-    color: white;
+nav a,
+.footerContact a,
+.privacy,
+.readMoreWhite {
+  text-decoration: underline;
 }
 
-.topSection {
-    flex-direction: column;
-}
-.topSection em, .topSection h2 {
-    font-weight: bold;
+header,
+.topSection,
+.implantsImgBox,
+footer {
+  flex-direction: column;
 }
 
 .topSection em {
-    color: #3e3e3e;
+  color: #3e3e3e;
 }
 
-.sep15Container p {
-    color: #aaa9a9;
+.sep15Container p:not(.black) {
+  color: #aaa9a9;
 }
+
 .businessHours div {
-    width: 50%;
+  width: 50%;
 }
 
 .hoursGrid {
-    min-width: 356px;
+  min-width: 356px;
 }
 
-.businessHours h3, .businessHours .blueButton {
-    color: white;
-    text-transform: capitalize;
-}
 .businessHours p {
-    color: var(--mid-light-gray);
-    line-height: 1;
-    margin: 0;
-}
-.comeVisit, .comeVisit p {
-    color: white;
-}
-.comeVisit img {
-    max-width: 15%;
+  color: var(--mid-light-gray);
+  line-height: 1;
 }
 
-.feelingFrozen p {
-    color: var(--mid-light-gray);
+.comeVisit img {
+  max-width: 15%;
 }
+
+.implants div {
+  margin: 5px;
+}
+
+.feelingFrozen p,
+.implants p,
+.ourDentists p,
+.services a,
+.digitalXrays p,
+footer p,
+footer a {
+  color: var(--mid-light-gray);
+}
+
+.feelingFrozen p,
+.implants p,
+.ourDentists p,
+.services a,
+.digitalXrays p,
+footer p,
+footer a {
+  color: var(--mid-light-gray);
+}
+
+.feelingFrozen p,
+.implants p,
+.ourDentists p,
+.services a,
+.digitalXrays p,
+footer p,
+footer a {
+  color: var(--light-gray-text);
+}
+
+.feelingFrozen p,
+.implants p,
+footer p,
+footer a,
+footer address span {
+  color: #aaa9a9;
+}
+
+.ourDentists > div,
+.readMore,
+.footerContact span {
+  display: block;
+}
+
 .blueButton {
-    background-color: var(--blue);
-    box-shadow: var(--button-shadow);
-    color: white;
-    margin: 10px 20px;
-    padding: .667em 1.333em;
-    text-transform: uppercase;
+  background-color: var(--blue);
+  box-shadow: var(--button-shadow);
+  font-size: 1.125rem;
+  margin: 10px 20px;
+  padding: 0.67rem 1.33rem;
+  text-transform: uppercase;
 }
+
 .navApptButton.blueButton {
-    border-radius: 3px;
-    text-transform: capitalize;
+  border-radius: 3px;
+}
+
+.readMore,
+.services h2 {
+  margin-bottom: 30px;
+}
+
+.readMoreBlue {
+  color: var(--blue);
+  font-size: 24px;
 }
 
 .readMoreWhite {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: var(--button-shadow);
-    color: var(--dark-gray);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1.125em;
-    padding: .667em 1.333em;
-    text-align: center;
-    text-decoration: none;
-    overflow-wrap: break-word;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--button-shadow);
+  color: var(--dark-gray);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.125rem;
+  overflow-wrap: break-word;
+  padding: 0.67rem 1.33rem;
 }
+
 .grid {
-    display: grid;
-    grid-auto-flow: row dense;
+  display: grid;
+  grid-auto-flow: row dense;
 }
+
 .hoursGrid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
+
 .dentistsGrid {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin-bottom: 10px;
+}
+
+.topBar p,
+.readMoreWhite,
+.ourDentists > div,
+.services h2,
+.digitalXrays {
+  text-align: center;
 }
 
 .servicesGrid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-} 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+.servicesGrid li {
+  margin: 0 30px;
+}
 
 .gridCol1 {
-    grid-column-start: 1;
+  grid-column-start: 1;
 }
 
 .gridCol2 {
-    grid-column-start: 2;
+  grid-column-start: 2;
 }
 
 .gridCol3 {
-    grid-column-start: 3;
+  grid-column-start: 3;
 }
+
 .gridCol4 {
-    grid-column-start: 4;
+  grid-column-start: 4;
 }
+
 .gridCol5 {
-    grid-column-start: 5;
+  grid-column-start: 5;
 }
+
 .gridCol6 {
-    grid-column-start: 6;
+  grid-column-start: 6;
 }
 
 .gridRow1 {
-    grid-row-start: 1;
+  grid-row-start: 1;
 }
+
 .gridRow2 {
-    grid-row-start: 2;
+  grid-row-start: 2;
 }
+
 .gridRow3 {
-    grid-row-start: 3;
+  grid-row-start: 3;
 }
+
 .gridRow4 {
-    grid-row-start: 4;
+  grid-row-start: 4;
 }
+
 .gridRow5 {
-    grid-row-start: 5;
+  grid-row-start: 5;
+}
+
+footer > div {
+  min-width: 100%;
+}
+
+footer > div:first-child {
+  min-height: 45vh;
+  padding: 0 30px 40px;
+}
+
+footer > div:first-child img {
+  margin: 0 20px;
+}
+
+footer > div:first-child ul {
+  list-style: none;
+}
+
+footer > div:first-child ul li {
+  margin: 16px 0;
+}
+
+footer h4 {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.privacy {
+  font-size: 10px;
 }
 
 footer .bottomBar {
-    background-color: black;
-}
-footer .socialsList i {
-    color: var(--mid-light-gray);
+  background-color: black;
 }
 
+footer .bottomBar p {
+  font-size: 12px;
+}
+
+footer .bottomBar a:not(first-of-type) {
+  margin: auto 8px;
+  padding: 0;
+}
+
+footer .socialsList i {
+  color: var(--mid-light-gray);
+}
